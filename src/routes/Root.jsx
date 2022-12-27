@@ -1,8 +1,10 @@
+import { Link, Outlet } from 'react-router-dom';
+
 export default function Root() {
     return (
       <>
         <div id="sidebar">
-          <h1>React Router Contacts</h1>
+          {/* <h1>React Router Contacts</h1>
           <div>
             <form id="search-form" role="search">
               <input
@@ -25,19 +27,21 @@ export default function Root() {
             <form method="post">
               <button type="submit">New</button>
             </form>
-          </div>
+          </div> */}
           <nav>
             <ul>
               <li>
-                <a href={`contacts/1`}>Your Name</a>
+                <Link to={`contacts/1`}>Your Name</Link>
               </li>
               <li>
-                <a href={`contacts/2`}>Your Friend</a>
+                <Link to={`contacts/2`}>Your Friend</Link>
               </li>
             </ul>
           </nav>
         </div>
-        <div id="detail"></div>
+        {/* <div id="detail">
+          <Outlet />
+        </div> */}
       </>
     );
   }
